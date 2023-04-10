@@ -25,13 +25,13 @@ interface Dataformat {
 }
 
 export const DisplayTable: NextPage<Props> = ({ page }) => {
-  const [data, setdata] = useState<Dataformat | null>(null);
+  const [data, setdata] = useState<any | null>(null);
 
   useEffect(() => {
     if (page) {
       setdata(Data(page));
     }
-  }, [])
+  }, []);
 
   console.log("data: " + JSON.stringify(data, null, 1));
 
