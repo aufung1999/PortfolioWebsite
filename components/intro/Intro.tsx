@@ -1,8 +1,9 @@
 import React from "react";
 import { FaAward } from "react-icons/fa";
 import { VscFolderLibrary } from "react-icons/vsc";
-import ME from "../../assets/me2.png";
+import ME from "../../public/assets/MyHead.jpg";
 import styles from "./Intro.module.css";
+import Image from "next/image";
 
 const Intro = () => {
   return (
@@ -10,37 +11,40 @@ const Intro = () => {
       <h5>Get to know</h5>
       <h2>About Me</h2>
       <div className="container">
-        <div className={styles.about__container}>
+        <div className={styles["about__container"]}>
           <div className={styles["about__me"]}>
-            <div className={styles["about__me-imageimage"]}>
-              <img src={ME} alt="me" />
+            <div className={styles["about__me-image"]}>
+              <img src={ME.src} />
             </div>
           </div>
           <div className={styles["about__content"]}>
             <div className={styles["about__cards"]}>
               <article className={styles["about__card"]}>
                 <FaAward className={styles["about__icon"]} />
-                <h5>Experience</h5>
-                <small>1 year</small>
+                <h5 style={{ fontSize: 25 }}>Experience</h5>
+                <h6 style={{ fontSize: 19 }}>Web dev: 2 years</h6>
+                <h6 style={{ fontSize: 19 }}>Machine Learning: 1 year</h6>
               </article>
               <article className={styles["about__card"]}>
                 <VscFolderLibrary className={styles["about__icon"]} />
-                <h5>Projects</h5>
-                <small>20+ Completed Projects</small>
+                <h5 style={{ fontSize: 25 }}>Projects</h5>
+                <small style={{ fontSize: 20 }}>10+ Completed Projects</small>
               </article>
             </div>
-            <p>
-              I’ve spent the last several months in a remote environment,
-              working with HTML, CSS, JavaScript, building everything from
-              landing pages to APIs. My experience as a teacher in an
-              international school helped me collaborate with fellow developers
-              from all over the world. Additionally, working with kids isn’t an
-              easy task, however, it has helped me become efficient, productive,
-              and fast even in a very stressful environment, which is an
-              important skill in the tech industry.
-            </p>
-            <a href="#contact" className={styles["btn btn-primary"]}>
-              Let's Talk
+            <div className={styles["about__content_paragraph"]}>
+              <p style={{ fontSize: 25 }} >
+                I have started making web projects since year 2 when I was
+                studying at Hong Kong Polytechnic. I have also participated some
+                STEM internship related to web development. Participated in small/medium-scaled projects.
+              </p>
+              <p style={{ fontSize: 25 }} >
+                In my final year of degree, I have also learnt Machine Learning
+                for my honours project, then I combined the Machine Learning and
+                Web development together.
+              </p>
+            </div>
+            <a href="#contact" className="btn btn-primary">
+              Let's Talk about why we Celebrate our birthdays
             </a>
           </div>
         </div>

@@ -7,10 +7,10 @@ const Header = () => {
   return (
     <header id="home">
       <div className="container">
-        <div className={styles.header__container}>
-          <h5>Hello I</h5>
-          <h1>Meri Gogichashvili</h1>
-          <h5 className="text-light" style={{}}>
+        <div className={styles["header__container"]}>
+          <h5>Hello I am</h5>
+          <h1>Fung Au</h1>
+          <h5 className="text-light" style={{fontSize:30,}}>
             Full-stack Developer
           </h5>
           <CTA />

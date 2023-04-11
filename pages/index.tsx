@@ -35,8 +35,8 @@ const Home: NextPage = () => {
 
   return (
     <>
-      {/* <Banner />
-   <Projects /> */}
+      {/* <Banner /> */}
+      {/* <Projects /> */}
       <Header />
       <Topbar />
       <Intro />

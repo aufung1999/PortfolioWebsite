@@ -97,12 +97,6 @@ const Experience = () => {
                 />
                 <h4>NodeJS</h4>
               </article>
-              <article className={styles["experience__details"]}>
-                <BsFillPatchCheckFill
-                  className={styles["experience__details-icon"]}
-                />
-                <h4>Git/GitHub</h4>
-              </article>
             </div>
           </div>
           <div className={styles["experience__backend"]}>
@@ -130,12 +124,36 @@ const Experience = () => {
           </div>
           <div className={styles["experience__backend"]}>
             <h3>Other Services</h3>
-            <div >
+            <div className={styles["experience__content"]}>
               <article className={styles["experience__details"]}>
                 <BsFillPatchCheckFill
                   className={styles["experience__details-icon"]}
                 />
                 <h4>Google Cloud Platform</h4>
+              </article>
+              <article className={styles["experience__details"]}>
+                <BsFillPatchCheckFill
+                  className={styles["experience__details-icon"]}
+                />
+                <h4>Git/GitHub</h4>
+              </article>
+              <article className={styles["experience__details"]}>
+                <BsFillPatchCheckFill
+                  className={styles["experience__details-icon"]}
+                />
+                <h4>Docker</h4>
+              </article>
+              <article className={styles["experience__details"]}>
+                <BsFillPatchCheckFill
+                  className={styles["experience__details-icon"]}
+                />
+                <h4>Heroku</h4>
+              </article>
+              <article className={styles["experience__details"]}>
+                <BsFillPatchCheckFill
+                  className={styles["experience__details-icon"]}
+                />
+                <h4>Netlify</h4>
               </article>
             </div>
           </div>
