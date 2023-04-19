@@ -6,8 +6,8 @@ import IMG4 from "../../public/assets/fake.png";
 import IMG5 from "../../public/assets/news.png";
 import IMG6 from "../../public/assets/math.png";
 
-import Img1 from "../../public/assets/MachineLearning.png";
-import Img2 from "../../public/assets/SelfLearningLang.png";
+import Img1 from "../../public/assets/machineLearning.png";
+import Img2 from "../../public/assets/selfLearningLang.png";
 
 import styles from "./Portfolio.module.css";
 import ShowMany from "../utilities/ShowMany";
