@@ -6,29 +6,37 @@ import IMG4 from "../../public/assets/fake.png";
 import IMG5 from "../../public/assets/news.png";
 import IMG6 from "../../public/assets/math.png";
 
+import Img1 from "../../public/assets/MachineLearning.png";
+import Img2 from "../../public/assets/SelfLearningLang.png";
+
 import styles from "./Portfolio.module.css";
+import ShowMany from "../utilities/ShowMany";
+import ShowOnce from "../utilities/ShowOnce";
 
 const Portfolio = () => {
   const soloProjects = [
     {
       id: 1,
-      title: "Bookstore",
-      img: IMG1.src,
+      title: "Sound Event Detection",
+      img: Img1.src,
       description:
-        "BookStore app that allows users to store books and update progress",
-      technologies: "React | Redux | Ruby on Rails",
-      link: "https://melodic-boba-111583.netlify.app/",
-      github: "https://github.com/Meri-MG/bookstore---react",
+        "Integrating Machine Learning and Web Development, and it is like the Sound Event Detection of IPhone",
+
+      frontend: "React, Redux, ChartJS",
+      backend: "Machine Learning, Python, FastAPI",
+      link: "https://master--zesty-longma-6d7cc7.netlify.app/",
+      github: "https://github.com/aufung1999/FYPWeb",
     },
     {
       id: 2,
-      title: "FakeStore",
-      img: IMG4.src,
+      title: "Self-Learning Language",
+      img: Img2.src,
       description:
-        "FakeStore app that provides information about available products and their details",
-      technologies: "React | Redux",
-      link: "https://fakestore-metrics.netlify.app/",
-      github: "https://github.com/Meri-MG/Fakestore---react",
+        "Users can record words they are not familiar with, and memorize them through some mini-games",
+      frontend: "React, Redux",
+      database: "Firebase",
+      link: "https://master--poetic-mermaid-0421c2.netlify.app/",
+      github: "https://github.com/aufung1999/LearnLanguageWebsite",
     },
     {
       id: 3,
@@ -73,46 +81,85 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio">
-      <h5>My Recent Work</h5>
-      <h2>Portfolio</h2>
+      <h5>
+        <ShowMany
+          mode_IN={"animate__zoomInDown"}
+          mode_OUT={"animate__zoomOutDown"}
+          speed={"animate__fast"}
+        >
+          My Recent Works
+        </ShowMany>
+      </h5>
+      <h2>
+        <ShowMany
+          mode_IN={"animate__zoomInDown"}
+          mode_OUT={"animate__zoomOutDown"}
+          speed={"animate__fast"}
+        >
+          Portfolio
+        </ShowMany>
+      </h2>
       <div className="container">
-        <div className={styles["portfolio__container"]}>
-          {soloProjects.map((pro) => (
-            <article className={styles["portfolio__item"]} key={pro.id}>
-              <div className={styles["portfolio__item-image"]}>
-                <img src={pro.img} alt={pro.title} />
-              </div>
-              <div className={styles["portfolio__item-content"]}>
-                <h3 style={{ fontSize: 18}}>{pro.title}</h3>
-                <p style={{ fontSize: "1.5rem"}}>{pro.description}</p>
-                <p style={{ fontSize: 18}}>
-                  {pro.technologies}
-                </p>
-              </div>
-              <div
-                className={styles["portfolio__item-cta"]}
-                // style={{ borderWidth: "thick", borderColor: "blueviolet" }}
+        <ShowOnce mode={"animate__zoomInDown"} speed={"animate__fast"}>
+          <div className={styles["portfolio__container"]}>
+            {soloProjects.map((pro, index) => (
+              <article
+                className={styles["portfolio__item"]}
+                key={pro.id}
+                // style={{ animationDelay: `${index}s` }}
               >
-                <a
-                  href={pro.github}
-                  target="_blank"
-                  className="btn"
-                  rel="noreferrer"
+                <div className={styles["portfolio__item-image"]}>
+                  <img src={pro.img} alt={pro.title} />
+                </div>
+                <div className={styles["portfolio__item-content"]}>
+                  <h3 style={{ fontSize: 18 }}>{pro.title}</h3>
+                  <p style={{ fontSize: 25 }}>{pro.description}</p>
+                  <p style={{ fontSize: 20 }}>
+                    {pro.frontend && (
+                      <div className={styles["flex"]}>
+                        <div>Frontned:&nbsp;</div>
+                        <div>{pro.frontend}</div>
+                      </div>
+                    )}
+                    {pro.backend && (
+                      <div className={styles["flex"]}>
+                        <div >Backend:&nbsp;</div>
+                        <div>{pro.backend}</div>
+                      </div>
+                    )}
+                    {pro.database && (
+                      <div className={styles["flex"]}>
+                        <div className={styles["flexStart"]}>Database:&nbsp;</div>
+                        <div>{pro.database}</div>
+                      </div>
+                    )}
+                  </p>
+                </div>
+                <div
+                  className={styles["portfolio__item-cta"]}
+                  // style={{ borderWidth: "thick", borderColor: "blueviolet" }}
                 >
-                  GitHub
-                </a>
-                <a
-                  href={pro.link}
-                  target="_blank"
-                  className="btn btn-primary"
-                  rel="noreferrer"
-                >
-                  Visit Website
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
+                  <a
+                    href={pro.github}
+                    target="_blank"
+                    className="btn"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                  <a
+                    href={pro.link}
+                    target="_blank"
+                    className="btn btn-primary"
+                    rel="noreferrer"
+                  >
+                    Visit Website
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </ShowOnce>
       </div>
     </section>
   );

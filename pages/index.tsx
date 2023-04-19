@@ -27,6 +27,8 @@ import Testimonials from "@/components/testimonials/Testimonials";
 import Contact from "@/components/contact/Contact";
 import Footer from "@/components/footer/Footer";
 
+import TrackVisibility from "react-on-screen";
+
 // import "../styles/globals.css";
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -35,8 +37,12 @@ const Home: NextPage = () => {
 
   return (
     <>
-      {/* <Banner /> */}
-      {/* <Projects /> */}
+        {/* <TrackVisibility>
+      {({ isVisible }) => (
+        isVisible &&
+
+        )}
+        </TrackVisibility> */}
       <Header />
       <Topbar />
       <Intro />

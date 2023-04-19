@@ -24,25 +24,25 @@
 }
 
 .portfolio__item h3 {
-  margin: 2rem 0;
+  margin: 1rem 0 2rem 0;
   height: auto;
 }
 
 .portfolio__item p {
-  margin: 0 0 3rem 0;
+  margin: 0 0 2rem 0;
   font-size: 0.9rem;
 
-  height: 50%;
+  height: 40%;
 }
 
 .portfolio__item-cta {
-  border: 1px solid transparent;
-  border-color: aliceblue;
+  /* border: 1px solid transparent;
+  border-color: aliceblue; */
 
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .portfolio__item-content {
@@ -61,4 +61,20 @@
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+}
+
+.flex{
+  border-bottom: 1px solid transparent;
+  border-color: aliceblue;
+
+  display: flex;
+  justify-content: flex-end;
+
+  padding-right: 5%;
+
+  font-weight: 700;
+}
+
+.flexStart{
+  justify-content: flex-start;
 }
