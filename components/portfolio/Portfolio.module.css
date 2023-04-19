@@ -63,19 +63,35 @@
   }
 }
 
-.flex{
-  border-bottom: 1px solid transparent;
+.flex {
+  border-bottom: 1px dashed transparent;
   border-color: aliceblue;
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 
+  margin-top: 2%;
   padding-right: 5%;
 
   font-weight: 700;
 }
 
-.flexStart{
+.flexStart {
   display: flex;
   justify-content: flex-start;
 }
+
+.prefix {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px transparent;
+  border-color: aliceblue;
+  border-radius: 10%;
+
+  /* margin-top: 0%; */
+  padding: 0px 10px 0px 10px ;
+}
+
+.suffix{
+
+}
+

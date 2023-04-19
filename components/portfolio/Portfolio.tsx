@@ -116,23 +116,19 @@ const Portfolio = () => {
                   <p style={{ fontSize: 20 }}>
                     {pro.frontend && (
                       <div className={styles["flex"]}>
-                        <div style={{ backgroundColor: "rgba(0,0,0,1)", padding:"0.5%" }}>
-                          Frontned
-                        </div>
-                        <div>:&nbsp;{pro.frontend}</div>
+                        <div className={styles["prefix"]}>Frontned</div>
+                        <div>{pro.frontend}</div>
                       </div>
                     )}
                     {pro.backend && (
                       <div className={styles["flex"]}>
-                        <div>Backend</div>
-                        <div>:&nbsp;{pro.backend}</div>
+                        <div className={styles["prefix"]}>Backend</div>
+                        <div>{pro.backend}</div>
                       </div>
                     )}
                     {pro.database && (
                       <div className={styles["flex"]}>
-                        <div className={styles["flexStart"]}>
-                          Database:&nbsp;
-                        </div>
+                        <div className={styles["prefix"]}>Database</div>
                         <div>{pro.database}</div>
                       </div>
                     )}
