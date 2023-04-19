@@ -15,6 +15,9 @@ const Contact = () => {
     e.preventDefault();
     setMessage(true);
     console.log(formRef.current);
+
+    if (formRef.current == null) return;
+
     emailjs
       .sendForm(
         "service_k2qawqh",
@@ -101,7 +104,7 @@ const Contact = () => {
               />
               <textarea
                 placeholder="Your message"
-                rows="7"
+                rows={7}
                 name="message"
                 required
               ></textarea>
