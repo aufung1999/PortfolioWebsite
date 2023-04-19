@@ -69,10 +69,9 @@ const Portfolio = () => {
     },
     {
       id: 6,
-      title: "Math Resource",
+      title: "Laundry Label helper",
       img: IMG6.src,
-      description:
-        "Real-world group project which is still in progress and will provide educational platform for future young developers",
+      description: "Coming...",
       technologies: "JavaScript | Scss | Python",
       link: "https://lukinoo.github.io/math-resource/",
       github: "https://github.com/lukinoo/math-resource",
@@ -117,19 +116,23 @@ const Portfolio = () => {
                   <p style={{ fontSize: 20 }}>
                     {pro.frontend && (
                       <div className={styles["flex"]}>
-                        <div>Frontned:&nbsp;</div>
-                        <div>{pro.frontend}</div>
+                        <div style={{ backgroundColor: "rgba(0,0,0,1)", padding:"0.5%" }}>
+                          Frontned
+                        </div>
+                        <div>:&nbsp;{pro.frontend}</div>
                       </div>
                     )}
                     {pro.backend && (
                       <div className={styles["flex"]}>
-                        <div >Backend:&nbsp;</div>
-                        <div>{pro.backend}</div>
+                        <div>Backend</div>
+                        <div>:&nbsp;{pro.backend}</div>
                       </div>
                     )}
                     {pro.database && (
                       <div className={styles["flex"]}>
-                        <div className={styles["flexStart"]}>Database:&nbsp;</div>
+                        <div className={styles["flexStart"]}>
+                          Database:&nbsp;
+                        </div>
                         <div>{pro.database}</div>
                       </div>
                     )}

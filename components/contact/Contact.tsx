@@ -36,7 +36,6 @@ const Contact = () => {
   return (
     <section id="contact">
       <h5>
-        {" "}
         <ShowMany
           mode_IN={"animate__zoomInDown"}
           mode_OUT={"animate__zoomOutDown"}
@@ -52,7 +51,7 @@ const Contact = () => {
           speed={"animate__fast"}
         >
           I do receive your messages and will respond asap if the valid email is
-          provided :)
+          provided
         </ShowMany>
       </h5>
       <h2>
@@ -109,7 +108,7 @@ const Contact = () => {
               <button type="submit" className="btn btn-primary">
                 Send Message
               </button>
-              {message && <span>Thanks, I&#39;ll reply ASAP :)</span>}
+              {message && <span>Thanks, I&#39;ll reply ASAP </span>}
             </form>
           </ShowMany>
         </div>
