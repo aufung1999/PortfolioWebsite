@@ -1,13 +1,13 @@
 import React from "react";
-import IMG1 from "../../public/assets/bookstore.png";
-import IMG2 from "../../public/assets/todo.png";
-import IMG3 from "../../public/assets/shelter.png";
-import IMG4 from "../../public/assets/fake.png";
-import IMG5 from "../../public/assets/news.png";
-import IMG6 from "../../public/assets/math.png";
+// import IMG1 from "../../public/assets/bookstore.png";
+// import IMG2 from "../../public/assets/todo.png";
+// import IMG3 from "../../public/assets/shelter.png";
+// import IMG4 from "../../public/assets/fake.png";
+// import IMG5 from "../../public/assets/news.png";
+// import IMG6 from "../../public/assets/math.png";
 
-import Img1 from "../../public/assets/machineLearning.png";
-import Img2 from "../../public/assets/selfLearningLang.png";
+const Img1 = "../../public/assets/machineLearning.png";
+const Img2 = "../../public/assets/selfLearningLang.png";
 
 import styles from "./Portfolio.module.css";
 import ShowMany from "../utilities/ShowMany";
@@ -18,7 +18,7 @@ const Portfolio = () => {
     {
       id: 1,
       title: "Sound Event Detection",
-      img: Img1.src,
+      img: Img1,
       description:
         "Integrating Machine Learning and Web Development, and it is like the Sound Event Detection of IPhone",
 
@@ -30,7 +30,7 @@ const Portfolio = () => {
     {
       id: 2,
       title: "Self-Learning Language",
-      img: Img2.src,
+      img: Img2,
       description:
         "Users can record words they are not familiar with, and memorize them through some mini-games",
       frontend: "React, Redux",
@@ -41,7 +41,7 @@ const Portfolio = () => {
     {
       id: 3,
       title: "To-Do-App",
-      img: IMG2.src,
+      // img: IMG2.src,
       description: "User friendly app to plan your day and manage tasks",
       technologies: "JavaScript | Webpack",
       link: "https://meri-mg.github.io/To-Do-List/dist/",
@@ -50,7 +50,7 @@ const Portfolio = () => {
     {
       id: 4,
       title: "Shelter",
-      img: IMG3.src,
+      // img: IMG3.src,
       description:
         "Fully responsive interactive website built based on Figma design",
       technologies: "JavaScript | CSS",
@@ -60,7 +60,7 @@ const Portfolio = () => {
     {
       id: 5,
       title: "World News",
-      img: IMG5.src,
+      // img: IMG5.src,
       description:
         "Fully responsive interactive website built based on Adobe XD design",
       technologies: "JavaScript | CSS",
@@ -70,7 +70,7 @@ const Portfolio = () => {
     {
       id: 6,
       title: "Laundry Label helper",
-      img: IMG6.src,
+      // img: IMG6.src,
       description: "Coming...",
       technologies: "JavaScript | Scss | Python",
       link: "https://lukinoo.github.io/math-resource/",
