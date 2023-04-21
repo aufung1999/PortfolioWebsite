@@ -26,7 +26,7 @@
 }
 
 html {
-  visibility: visible;
+  /* visibility: visible; */
   scroll-behavior: smooth;
   /* background-color: rgb(196, 27, 27); */
 }
@@ -42,16 +42,14 @@ body {
   color: var(--color-white);
   line-height: 1.7;
   /* background-image: url(../public/assets/bg-texture.png); */
+  border: 10px solid;
+  border-color: aliceblue;
 }
 
 .container {
   width: var(--container-width-lg);
   /* min-width: fit-content; */
   margin: 0 auto;
-
-  /* display: flex; */
-  /* flex: auto; */
-  /* flex-wrap: wrap; */
 
   border: 10px solid;
   border-color: aliceblue;
@@ -126,25 +124,6 @@ img {
   object-fit: cover;
 }
 
-@media screen and (max-width: 1024px){
-  .container {
-    width: var(--container-width-md);
-  }
-
-  section {
-    margin-top: 6rem;
-  }
-}
-
-@media screen and (max-width: 600px){
-  .container {
-    width: var(--container-width-sm);
-  }
-
-  section > h2 {
-    margin-bottom: 2rem;
-  }
-}
 
 /* ................................................................. */
 /* Header.module.css */
@@ -246,3 +225,25 @@ footer a {
   color: var(--color-bg);
 }
 /* ................................................................. */
+
+
+
+/* @media screen and (max-width: 1024px){
+  .container {
+    width: var(--container-width-md);
+  }
+
+  section {
+    margin-top: 6rem;
+  }
+} */
+
+/* @media screen and (max-width: 600px){
+  .container {
+    width: var(--container-width-sm);
+  }
+
+  section > h2 {
+    margin-bottom: 2rem;
+  }
+} */
