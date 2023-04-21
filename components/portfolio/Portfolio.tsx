@@ -6,9 +6,9 @@ import IMG4 from "../../public/assets/fake.png";
 import IMG5 from "../../public/assets/news.png";
 import IMG6 from "../../public/assets/math.png";
 
-import Img1 from "../../public/assets/machineLearning.png";
-import Img2 from "../../public/assets/selfLearningLang.png";
-import Img3 from "../../public/assets/travelCalendar.png";
+// import Img1 from "../../public/assets/machineLearning.png";
+// import Img2 from "../../public/assets/selfLearningLang.png";
+// import Img3 from "../../public/assets/travelCalendar.png";
 
 import styles from "./Portfolio.module.css";
 import ShowMany from "../utilities/ShowMany";
@@ -19,7 +19,7 @@ const Portfolio = () => {
     {
       id: 1,
       title: "Sound Event Detection",
-      img: Img1.src,
+      img: "../../public/assets/machineLearning.png",
       description:
         "Integrating Machine Learning and Web Development, and it is like the Sound Event Detection of IPhone",
 
@@ -31,7 +31,7 @@ const Portfolio = () => {
     {
       id: 2,
       title: "Self-Learning Language",
-      img: Img2.src,
+      img: "../../public/assets/selfLearningLang.png",
       description:
         "Users can record words they are not familiar with, and memorize them through some mini-games",
       frontend: "React, Redux",
@@ -42,7 +42,7 @@ const Portfolio = () => {
     {
       id: 3,
       title: "Travel Calenther",
-      img: Img3.src,
+      img:"../../public/assets/travelCalendar.png",
       description:
       "This website is for people who always travel around the world, so that they can know the local weather and temperature.",
       technologies: "JavaScript | Webpack",
