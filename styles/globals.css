@@ -28,12 +28,14 @@
 html {
   /* visibility: visible; */
   scroll-behavior: smooth;
-  /* background-color: rgb(196, 27, 27); */
+  background-color: rgb(196, 27, 27);
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
+
+
 
 body {
   min-width: fit-content;
@@ -228,7 +230,7 @@ footer a {
 
 
 
-/* @media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px){
   .container {
     width: var(--container-width-md);
   }
@@ -236,9 +238,9 @@ footer a {
   section {
     margin-top: 6rem;
   }
-} */
+}
 
-/* @media screen and (max-width: 600px){
+@media screen and (max-width: 600px){
   .container {
     width: var(--container-width-sm);
   }
@@ -246,4 +248,10 @@ footer a {
   section > h2 {
     margin-bottom: 2rem;
   }
-} */
+
+  #__next {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+}

@@ -14,16 +14,16 @@ const Home: NextPage = () => {
   const [page, setPage] = useState(1);
 
   return (
-    <div className="home">
+    <>
+      <meta name="viewport" content="width=device-width, initial-scale=0.8" />
       <Header />
       <Topbar />
       <Intro />
       <Experience />
       <Portfolio />
-      {/* <Testimonials /> */}
       <Contact />
       <Footer />
-    </div>
+    </>
   );
 };
 
