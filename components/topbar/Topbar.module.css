@@ -34,6 +34,6 @@ nav a.active {
 
 @media screen and (max-width: 600px) {
   .nav {
-    visibility: hidden;
+    /* visibility: hidden; */
   }
 }
