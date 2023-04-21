@@ -79,7 +79,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio">
+    <section id="portfolio" className="">
       <h5>
         <ShowMany
           mode_IN={"animate__zoomInDown"}
@@ -111,9 +111,9 @@ const Portfolio = () => {
                   <img src={pro.img} alt={pro.title} />
                 </div>
                 <div className={styles["portfolio__item-content"]}>
-                  <h3 style={{ fontSize: 18 }}>{pro.title}</h3>
-                  <p style={{ fontSize: 25 }}>{pro.description}</p>
-                  <p style={{ fontSize: 20 }}>
+                  <h3 className={styles["title"]}>{pro.title}</h3>
+                  <p className={styles["description"]}>{pro.description}</p>
+                  <p className={styles["frontend"]}>
                     {pro.frontend && (
                       <div className={styles["flex"]}>
                         <div className={styles["prefix"]}>Frontned</div>
@@ -134,10 +134,7 @@ const Portfolio = () => {
                     )}
                   </p>
                 </div>
-                <div
-                  className={styles["portfolio__item-cta"]}
-                  // style={{ borderWidth: "thick", borderColor: "blueviolet" }}
-                >
+                <div className={styles["portfolio__item-cta"]}>
                   <a
                     href={pro.github}
                     target="_blank"
