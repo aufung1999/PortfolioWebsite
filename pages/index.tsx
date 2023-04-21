@@ -10,11 +10,6 @@ import Portfolio from "@/components/portfolio/Portfolio";
 import Contact from "@/components/contact/Contact";
 import Footer from "@/components/footer/Footer";
 
-import TrackVisibility from "react-on-screen";
-
-// import "../styles/globals.css";
-// const inter = Inter({ subsets: ['latin'] })
-
 const Home: NextPage = () => {
   const [page, setPage] = useState(1);
 
