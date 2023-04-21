@@ -63,40 +63,33 @@ const Intro = () => {
                   {/* animate.css */}
 
                   <FaAward className={styles["about__icon"]} />
-                  <h5 style={{ fontSize: 25 }}>Experience</h5>
-                  <h6 style={{ fontSize: 19 }}>Web dev: 2 years</h6>
-                  <h6 style={{ fontSize: 19 }}>Machine Learning: 1 year</h6>
+                  <h5>Experience</h5>
+                  <h6>Web dev: 2 years</h6>
+                  <h6>Machine Learning: 1 year</h6>
                 </article>
                 <article className={styles["about__card"]}>
                   {/* animate.css */}
 
                   <VscFolderLibrary className={styles["about__icon"]} />
-                  <h5 style={{ fontSize: 25 }}>Projects</h5>
-                  <small style={{ fontSize: 20 }}>10+ Completed Projects</small>
+                  <h5>Projects</h5>
+                  <small>10+ Completed Projects</small>
                 </article>
               </div>
-            </ShowMany>
 
-            <div className={styles["about__content_paragraph"]}>
-              {/* animate.css */}
-              <ShowMany
-                mode_IN={"animate__slideInRight"}
-                mode_OUT={"animate__slideOutRight"}
-                speed={"animate"}
-              >
-                <p style={{ fontSize: 25 }}>
+              <div className={styles["about__content_paragraph"]}>
+                <p>
                   I have started making web projects since year 2 when I was
                   studying at Hong Kong Polytechnic. I have also participated
                   some STEM internship related to web development. Participated
                   in small/medium-scaled projects.
                 </p>
-                <p style={{ fontSize: 25 }}>
+                <p>
                   In my final year of degree, I have also learnt Machine
                   Learning for my honours project, then I combined the Machine
                   Learning and Web development together.
                 </p>
-              </ShowMany>
-            </div>
+              </div>
+            </ShowMany>
             <a href="#contact" className="btn btn-primary">
               Let&#39;s Talk about why we Celebrate our birthdays
             </a>
