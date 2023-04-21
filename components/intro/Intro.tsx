@@ -90,9 +90,11 @@ const Intro = () => {
                 </p>
               </div>
             </ShowMany>
-            <a href="#contact" className="btn btn-primary">
-              Let&#39;s Talk about why we Celebrate our birthdays
-            </a>
+            <div className={styles["about__contact_btn"]}>
+              <a href="#contact" className="btn btn-primary">
+                Let&#39;s Talk about why we Celebrate our birthdays
+              </a>
+            </div>
           </div>
         </div>
       </div>
