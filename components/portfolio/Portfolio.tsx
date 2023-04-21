@@ -13,13 +13,18 @@ import travelCalendar from "../../public/assets/travelCalendar.png";
 import styles from "./Portfolio.module.css";
 import ShowMany from "../utilities/ShowMany";
 import ShowOnce from "../utilities/ShowOnce";
+import Image from "next/image";
+
+type Props = {
+  src?: string | undefined;
+};
 
 const Portfolio = () => {
   const soloProjects = [
     {
       id: 1,
       title: "Sound Event Detection",
-      img: machineLearning.src,
+      img: machineLearning,
       description:
         "Integrating Machine Learning and Web Development, and it is like the Sound Event Detection of IPhone",
 
@@ -31,7 +36,7 @@ const Portfolio = () => {
     {
       id: 2,
       title: "Self-Learning Language",
-      img: selfLearningLang.src,
+      img: selfLearningLang,
       description:
         "Users can record words they are not familiar with, and memorize them through some mini-games",
       frontend: "React, Redux",
@@ -42,7 +47,7 @@ const Portfolio = () => {
     {
       id: 3,
       title: "Travel Calenther",
-      img: travelCalendar.src,
+      img: travelCalendar,
       description:
         "This website is for people who always travel around the world, so that they can know the local weather and temperature.",
       technologies: "JavaScript | Webpack",
@@ -114,7 +119,13 @@ const Portfolio = () => {
                 // style={{ animationDelay: `${index}s` }}
               >
                 <div className={styles["portfolio__item-image"]}>
-                  <img src={pro.img} alt={pro.title} />
+                  {/* <img src={pro.img} alt={pro.title} /> */}
+                  <Image
+                    src={pro.img}
+                    alt={pro.title}
+                    width={200}
+                    height={200}
+                  />
                 </div>
                 <div className={styles["portfolio__item-content"]}>
                   <h3>
