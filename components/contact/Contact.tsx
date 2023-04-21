@@ -104,7 +104,7 @@ const Contact = () => {
               />
               <textarea
                 placeholder="Your message"
-                rows={7}
+                rows={5}
                 name="message"
                 required
               ></textarea>
