@@ -27,6 +27,7 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: rgb(196, 27, 27);
 }
 
 ::-webkit-scrollbar {
@@ -34,11 +35,12 @@ html {
 }
 
 body {
+  min-width: fit-content;
   font-family: "Poppins", sans-serif;
   background-color: var(--color-bg);
   color: var(--color-white);
   line-height: 1.7;
-  background-image: url(../public/assets/bg-texture.png);
+  /* background-image: url(../public/assets/bg-texture.png); */
 }
 
 .container {
@@ -115,7 +117,7 @@ img {
   object-fit: cover;
 }
 
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   .container {
     width: var(--container-width-md);
   }
@@ -123,9 +125,9 @@ img {
   section {
     margin-top: 6rem;
   }
-}
+} */
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .container {
     width: var(--container-width-sm);
   }
@@ -133,7 +135,29 @@ img {
   section > h2 {
     margin-bottom: 2rem;
   }
+} */
+
+@media screen and (max-width: 481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  html {
+    background-color: rgb(196, 27, 27);
+  }
+  body {
+    min-width: 100%;
+  }
+
+  .home {
+    /* min-width: max-content; */
+  }
+
+  .container {
+    background-color: rgb(179, 230, 203);
+    width: var(--container-width-lg);
+
+    margin: 0 auto;
+  }
 }
+
 /* ................................................................. */
 /* Header.module.css */
 /* ................................................................. */
@@ -191,7 +215,7 @@ nav a.active {
 /* ................................................................. */
 /* Intro.module.css */
 /* ................................................................. */
-.hide{
+.hide {
   visibility: hidden;
   background-color: #000000;
 }

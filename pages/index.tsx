@@ -19,7 +19,7 @@ const Home: NextPage = () => {
   const [page, setPage] = useState(1);
 
   return (
-    <>
+    <div className="home">
       <Header />
       <Topbar />
       <Intro />
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
       {/* <Testimonials /> */}
       <Contact />
       <Footer />
-    </>
+    </div>
   );
 };
 

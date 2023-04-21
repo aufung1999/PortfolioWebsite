@@ -13,9 +13,9 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en">
+      <Html>
         <Head>{CssBaseline.flush()}</Head>
-        <body>
+        <body className="bg-white">
           <Main />
           <NextScript />
         </body>
