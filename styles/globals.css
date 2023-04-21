@@ -34,6 +34,13 @@ html {
   display: none;
 }
 
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vh;
+}
+
 body {
   min-width: fit-content;
   font-family: "Poppins", sans-serif;
@@ -139,15 +146,20 @@ img {
 
 @media screen and (max-width: 481px) {
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-  html {
-    background-color: rgb(196, 27, 27);
-  }
-  body {
-    min-width: 100%;
+
+  #__next {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vh;
   }
 
-  .home {
-    /* min-width: max-content; */
+  html {
+    background-color: rgb(196, 27, 27);
+
+  }
+  body {
+    min-width: 100vh;
   }
 
   .container {
