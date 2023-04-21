@@ -24,7 +24,7 @@ const Portfolio = () => {
         "Integrating Machine Learning and Web Development, and it is like the Sound Event Detection of IPhone",
 
       frontend: "React, Redux, ChartJS",
-      backend: "Machine Learning, Python, FastAPI",
+      backend: "Python, FastAPI",
       link: "https://master--zesty-longma-6d7cc7.netlify.app/",
       github: "https://github.com/aufung1999/FYPWeb",
     },
@@ -44,7 +44,7 @@ const Portfolio = () => {
       title: "Travel Calenther",
       img: Img3.src,
       description:
-        "This website is for people who always travel around the world, so that they can know the local weather and temperature.",
+      "This website is for people who always travel around the world, so that they can know the local weather and temperature.",
       technologies: "JavaScript | Webpack",
       frontend: "Next, Redux",
       database: "Firebase",
@@ -53,21 +53,23 @@ const Portfolio = () => {
     },
     {
       id: 4,
-      title: "Shelter",
+      title: "Examination System",
       // img: IMG3.src,
       description:
         "Fully responsive interactive website built based on Figma design",
-      technologies: "JavaScript | CSS",
-      link: "https://meri-mg.github.io/shelter/pages/main/index.html",
+        technologies: "JavaScript | CSS",
+        link: "https://meri-mg.github.io/shelter/pages/main/index.html",
       github: "https://github.com/Meri-MG/shelter",
     },
     {
       id: 5,
-      title: "World News",
-      // img: IMG5.src,
+      title: "MERN - GPS Expense Tracker",
+      img: IMG5.src,
       description:
-        "Fully responsive interactive website built based on Adobe XD design",
-      technologies: "JavaScript | CSS",
+      "A mobile app allows users to track how much they have spent by visiting places, depends on how long they have stayed in shops",
+      frontend: "React Native, Redux",
+      backend: "NodeJS, Express",
+      database: "MongoDB",
       link: "https://meri-mg.github.io/Unilab-world-news/",
       github: "https://github.com/Meri-MG/Unilab-world-news",
     },
