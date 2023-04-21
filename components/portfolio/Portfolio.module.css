@@ -8,8 +8,9 @@
   background: var(--color-bg-variant);
   padding: 1.3rem;
   border-radius: 2rem;
-  /* height: ; */
-  height: 100%;
+
+  /* height: auto; */
+  min-height: 100%;
 
   border: 1px solid transparent;
   transition: var(--transition);
@@ -33,18 +34,23 @@
 }
 
 .portfolio__item-content {
-  border: 1px solid transparent;
-  border-color: aliceblue;
+  /* border: 5px solid ;
+  border-color: aliceblue; */
 
-  /* height: 30%; */
+  height: 60%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .portfolio__item-cta {
-  border: 1px solid transparent;
-  border-color: aliceblue;
+  /* border: 1px solid;
+  border-color: aliceblue; */
 
   display: flex;
   justify-content: flex-end;
+  width: 100%;
 
   /* height: auto; */
 
@@ -58,17 +64,22 @@
 
 .portfolio__item p {
   margin: 0 0 2rem 0;
-  font-size: 0.9rem;
 }
 
 .title {
-  font-size: 18px;
+  font-size: 1.3rem;
+  font-style: italic;
+
+  border-bottom: 3px double;
+  display: inline;
 }
+
 .description {
-  font-size: 25px;
+  font-size: 1rem;
 }
-.frontend {
-  font-size: 20px;
+
+.techniques {
+  font-size: 0.9rem;
 }
 
 .flex {
@@ -84,31 +95,49 @@
   font-weight: 700;
 }
 
-.flexStart {
-  display: flex;
-  justify-content: flex-start;
-}
-
 .prefix {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 1px transparent;
-  border-color: aliceblue;
+  background-color: rgba(255, 255, 255, 1);
+  /* border: 1px solid;
+  border-color: aliceblue; */
   border-radius: 10%;
 
+  color: black;
+  font-size: 0.9rem;
+
   /* margin-top: 0%; */
-  padding: 0px 10px 0px 10px;
+  padding: 0px 7px 0px 7px;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .portfolio__container {
-      grid-template-columns: 1fr 1fr;
-      gap: 1.2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
   }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   .portfolio__container {
-      grid-template-columns: 1fr;
-      gap: 1rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .title {
+    font-size: 1.7rem;
+    font-style: italic;
+
+    border-bottom: 3px double;
+    display: inline;
+  }
+
+  .description {
+    font-size: 1.3rem;
+  }
+
+  .techniques {
+    font-size: 1.2rem;
+  }
+
+  .prefix {
+    font-size: 1.2rem;
   }
 }

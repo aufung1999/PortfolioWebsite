@@ -1,13 +1,14 @@
 import React from "react";
-// import IMG1 from "../../public/assets/bookstore.png";
-// import IMG2 from "../../public/assets/todo.png";
-// import IMG3 from "../../public/assets/shelter.png";
-// import IMG4 from "../../public/assets/fake.png";
-// import IMG5 from "../../public/assets/news.png";
-// import IMG6 from "../../public/assets/math.png";
+import IMG1 from "../../public/assets/bookstore.png";
+import IMG2 from "../../public/assets/todo.png";
+import IMG3 from "../../public/assets/shelter.png";
+import IMG4 from "../../public/assets/fake.png";
+import IMG5 from "../../public/assets/news.png";
+import IMG6 from "../../public/assets/math.png";
 
 import Img1 from "../../public/assets/machineLearning.png";
 import Img2 from "../../public/assets/selfLearningLang.png";
+import Img3 from "../../public/assets/travelCalendar.png";
 
 import styles from "./Portfolio.module.css";
 import ShowMany from "../utilities/ShowMany";
@@ -40,12 +41,15 @@ const Portfolio = () => {
     },
     {
       id: 3,
-      title: "To-Do-App",
-      // img: IMG2.src,
-      description: "User friendly app to plan your day and manage tasks",
+      title: "Travel Calenther",
+      img: Img3.src,
+      description:
+        "This website is for people who always travel around the world, so that they can know the local weather and temperature.",
       technologies: "JavaScript | Webpack",
-      link: "https://meri-mg.github.io/To-Do-List/dist/",
-      github: "https://github.com/Meri-MG/To-Do-List",
+      frontend: "Next, Redux",
+      database: "Firebase",
+      link: "https://sage-biscochitos-c3e89c.netlify.app/weather",
+      github: "https://github.com/aufung1999/travel-weather",
     },
     {
       id: 4,
@@ -111,9 +115,11 @@ const Portfolio = () => {
                   <img src={pro.img} alt={pro.title} />
                 </div>
                 <div className={styles["portfolio__item-content"]}>
-                  <h3 className={styles["title"]}>{pro.title}</h3>
+                  <h3 >
+                    <div className={styles["title"]}>{pro.title}</div>
+                  </h3>
                   <p className={styles["description"]}>{pro.description}</p>
-                  <p className={styles["frontend"]}>
+                  <p className={styles["techniques"]}>
                     {pro.frontend && (
                       <div className={styles["flex"]}>
                         <div className={styles["prefix"]}>Frontned</div>
