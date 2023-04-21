@@ -6,9 +6,9 @@ import IMG4 from "../../public/assets/fake.png";
 import IMG5 from "../../public/assets/news.png";
 import IMG6 from "../../public/assets/math.png";
 
-import ML from "../../public/assets/machineLearning.png";
-import SL from "../../public/assets/selfLearningLang.png";
-import TC from "../../public/assets/travelCalendar.png";
+import ML from "../../public/assets/machineLearning.jpg";
+import SL from "../../public/assets/selfLearningLang.jpg";
+import TC from "../../public/assets/travelCalendar.jpg";
 
 import styles from "./Portfolio.module.css";
 import ShowMany from "../utilities/ShowMany";
