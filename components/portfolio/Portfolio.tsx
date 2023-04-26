@@ -122,7 +122,9 @@ const Portfolio = () => {
           <div className={styles["portfolio__container"]}>
             {soloProjects.map((pro, index) => (
               <article
-                className={styles["portfolio__item"]}
+                className={
+                  pro.id == 6 ? styles["comingSoon"] : styles["portfolio__item"]
+                }
                 key={pro.id}
                 // style={{ animationDelay: `${index}s` }}
               >

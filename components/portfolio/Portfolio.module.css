@@ -19,6 +19,21 @@
   flex-direction: column; /*added*/
 }
 
+.comingSoon {
+  background-color: rgba(255, 255, 255, 0.432);
+  padding: 1.3rem;
+  border-radius: 2rem;
+
+  /* height: auto; */
+  min-height: 100%;
+
+  border: 1px solid transparent;
+  transition: var(--transition);
+
+  display: flex; /*added*/
+  flex-direction: column; /*added*/
+}
+
 .portfolio__item:hover {
   border-color: var(--color-primary-variant);
   background: transparent;
