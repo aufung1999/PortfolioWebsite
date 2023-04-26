@@ -33,6 +33,11 @@
   height: 30%;
 }
 
+.adjustment {
+  position: relative;
+  top: -50px;
+}
+
 .portfolio__item-content {
   /* border: 5px solid ;
   border-color: aliceblue; */
@@ -75,11 +80,11 @@
 }
 
 .description {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .techniques {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .flex {

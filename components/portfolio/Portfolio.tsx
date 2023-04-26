@@ -9,6 +9,9 @@ import IMG6 from "../../public/assets/math.png";
 import ML from "../../public/assets/machineLearning.jpg";
 import SL from "../../public/assets/selfLearningLang.jpg";
 import TC from "../../public/assets/travelCalendar.jpg";
+import EXAM from "../../public/assets/examination.png";
+import GET from "../../public/assets/gps_ET.png";
+import CU from "../../public/assets/ComingUp.jpg";
 
 import styles from "./Portfolio.module.css";
 import ShowMany from "../utilities/ShowMany";
@@ -61,33 +64,36 @@ const Portfolio = () => {
     {
       id: 4,
       title: "Examination System",
-      // img: IMG3.src,
+      img: EXAM.src,
       description:
         "Fully responsive interactive website built based on Figma design",
-      technologies: "JavaScript | CSS",
-      link: "https://meri-mg.github.io/shelter/pages/main/index.html",
+      frontend: "HTML/Javascript",
+      backend: "PHP",
+      database: "MySql",
+      link: "https://connectpolyu-my.sharepoint.com/:v:/r/personal/18050085d_connect_polyu_hk/Documents/Courses/2020.1/EIE4432/GroupProj/Group.mp4?csf=1&web=1&e=GMowBN",
       github: "https://github.com/Meri-MG/shelter",
     },
     {
       id: 5,
       title: "MERN - GPS Expense Tracker",
-      img: IMG5.src,
+      img: GET.src,
       description:
         "A mobile app allows users to track how much they have spent by visiting places, depends on how long they have stayed in shops",
       frontend: "React Native, Redux",
       backend: "NodeJS, Express",
       database: "MongoDB",
-      link: "https://meri-mg.github.io/Unilab-world-news/",
-      github: "https://github.com/Meri-MG/Unilab-world-news",
+      link: "https://master--marvelous-bombolone-fb8b6f.netlify.app/",
+      github: "https://github.com/aufung1999/GPS_expenxetracker",
     },
     {
       id: 6,
       title: "Laundry Label helper",
-      // img: IMG6.src,
-      description: "Coming...",
+      img: CU.src,
+      description:
+        "I am making this app to help me distinguish which laundry setting is the best for me to wash my clothings. Since I always use the wrong aundry setting and break my clothings which is super annoying",
       technologies: "JavaScript | Scss | Python",
-      link: "https://lukinoo.github.io/math-resource/",
-      github: "https://github.com/lukinoo/math-resource",
+      // link: "",
+      // github: "",
     },
   ];
 
@@ -121,7 +127,15 @@ const Portfolio = () => {
                 // style={{ animationDelay: `${index}s` }}
               >
                 <div className={styles["portfolio__item-image"]}>
-                  <img src={pro.img} alt={pro.title} />
+                  <img
+                    className={
+                      pro.id == 6 || pro.id == 5 || pro.id == 3
+                        ? styles["adjustment"]
+                        : ""
+                    }
+                    src={pro.img}
+                    alt={pro.title}
+                  />
                   {/* <Image
                     className="object-cover"
                     src={pro.img}
@@ -157,22 +171,26 @@ const Portfolio = () => {
                   </p>
                 </div>
                 <div className={styles["portfolio__item-cta"]}>
-                  <a
-                    href={pro.github}
-                    target="_blank"
-                    className="btn"
-                    rel="noreferrer"
-                  >
-                    GitHub
-                  </a>
-                  <a
-                    href={pro.link}
-                    target="_blank"
-                    className="btn btn-primary"
-                    rel="noreferrer"
-                  >
-                    Visit Website
-                  </a>
+                  {pro.github && (
+                    <a
+                      href={pro.github}
+                      target="_blank"
+                      className="btn"
+                      rel="noreferrer"
+                    >
+                      GitHub
+                    </a>
+                  )}
+                  {pro.link && (
+                    <a
+                      href={pro.link}
+                      target="_blank"
+                      className="btn btn-primary"
+                      rel="noreferrer"
+                    >
+                      Visit Website
+                    </a>
+                  )}
                 </div>
               </article>
             ))}

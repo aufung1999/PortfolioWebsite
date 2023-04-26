@@ -53,8 +53,8 @@ body {
   /* min-width: fit-content; */
   margin: 0 auto;
 
-  border: 1px solid;
-  border-color: aliceblue;
+  /* border: 1px solid;
+  border-color: aliceblue; */
 }
 
 h1,
@@ -237,6 +237,12 @@ footer a {
 
   section {
     margin-top: 6rem;
+  }
+  html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative
   }
 }
 
