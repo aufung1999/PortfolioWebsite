@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./Header.module.css";
-// import CV from '../../assets/cv_meri_gogichashvili.pdf';
+// import CV from "../../public/assets/Resume.pdf";
 
 const CTA = () => {
   return (
     <div className={styles.cta}>
       <a
-        // href={}
+        // href={CV}
         download
         className="btn"
       >

@@ -28,7 +28,7 @@
 html {
   /* visibility: visible; */
   scroll-behavior: smooth;
-  background-color: rgb(196, 27, 27);
+  background-color: rgb(0, 0, 0);
 }
 
 ::-webkit-scrollbar {
