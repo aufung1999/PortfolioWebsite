@@ -55,7 +55,7 @@
   /* border: 1px solid;
   border-color: aliceblue; */
 }
-.experience__details-word {
+.experience__details-word { 
   display: flex;
   justify-content: center;
   width: 100%;
