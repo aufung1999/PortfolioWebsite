@@ -2,29 +2,29 @@
   display: grid;
   grid-template-columns: 35% 50%;
   gap: 15%;
-
-
 }
 
 .about__me {
   width: 100%;
-  aspect-ratio: 1/1;
+  /* aspect-ratio: 1/1; */
   border-radius: 2rem;
-  background: linear-gradient(
+  /* background: linear-gradient(
     45deg,
     transparent,
     var(--color-primary),
     transparent
-  );
+  ); */
   display: grid;
   place-items: center;
 
+  /* padding: 2rem; */
 
   /* border: 1px solid;
   border-color: aliceblue; */
 }
 
 .about__me-image {
+  margin: 1rem;
   border-radius: 2rem;
   overflow: hidden;
   /* transform: rotate(10deg); */
@@ -39,7 +39,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-
 }
 
 .about__card {
@@ -49,8 +48,6 @@
   padding: 2rem;
   text-align: center;
   transition: var(--transition);
-
-
 }
 
 .about__card:hover {
@@ -75,14 +72,11 @@
 .about__card small {
   font-size: 1rem;
   color: var(--color-light);
-
 }
 
 .about__content p {
   margin: 2rem 0 2.6rem;
   color: var(--color-light);
-
-
 }
 
 .about__content_paragraph p {
@@ -94,7 +88,6 @@
 .about__contact_btn {
   display: flex;
   justify-content: center;
-
 }
 
 @media screen and (max-width: 1024px) {

@@ -9,6 +9,7 @@ import TrackVisibility from "react-on-screen";
 
 import ShowOnce from "../utilities/ShowOnce";
 import ShowMany from "../utilities/ShowMany";
+import { SpinningCube } from "./SpinningCube";
 
 const Intro = () => {
   return (
@@ -41,13 +42,14 @@ const Intro = () => {
             <div className={styles["about__me-image"]}>
               {/* animate.css */}
 
-              <ShowMany
+              {/* <ShowMany
                 mode_IN={"animate__slideInDown"}
                 mode_OUT={"animate__slideOutDown"}
                 speed={"animate__slow"}
-              >
-                <img src={ME.src} />
-              </ShowMany>
+              > */}
+              <SpinningCube />
+              {/* <img src={ME.src} /> */}
+              {/* </ShowMany> */}
             </div>
           </div>
           <div className={styles["about__content"]}>
