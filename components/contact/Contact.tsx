@@ -39,32 +39,32 @@ const Contact = () => {
   return (
     <section id="contact">
       <h5>
-        <ShowMany
+        {/* <ShowMany
           mode_IN={"animate__zoomInDown"}
           mode_OUT={"animate__zoomOutDown"}
           speed={"animate__fast"}
-        >
-          Get In Touch
-        </ShowMany>
+        > */}
+        Get In Touch
+        {/* </ShowMany> */}
       </h5>
       <h5>
-        <ShowMany
+        {/* <ShowMany
           mode_IN={"animate__jackInTheBox"}
           mode_OUT={"animate__zoomOutDown"}
           speed={"animate__fast"}
-        >
-          I do receive your messages and will respond asap if the valid email is
-          provided
-        </ShowMany>
+        > */}
+        I do receive your messages and will respond asap if the valid email is
+        provided
+        {/* </ShowMany> */}
       </h5>
       <h2>
-        <ShowMany
+        {/* <ShowMany
           mode_IN={"animate__zoomInDown"}
           mode_OUT={"animate__zoomOutDown"}
           speed={"animate__fast"}
-        >
-          Contact Me
-        </ShowMany>
+        > */}
+        Contact Me
+        {/* </ShowMany> */}
       </h2>
       <div className="container d-flex justify-content-center">
         <div className={styles["contact__container"]}>

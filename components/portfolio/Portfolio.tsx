@@ -11,7 +11,7 @@ import SL from "../../public/assets/selfLearningLang.jpg";
 import TC from "../../public/assets/travelCalendar.jpg";
 import EXAM from "../../public/assets/examination.png";
 import GET from "../../public/assets/gps_ET.png";
-import CU from "../../public/assets/ComingUp.jpg";
+import EC from "../../public/assets/Amazona.png";
 
 import styles from "./Portfolio.module.css";
 import ShowMany from "../utilities/ShowMany";
@@ -23,7 +23,6 @@ import Image from "next/image";
 //   src: string | StaticImageData;
 //   className?: string;
 // }
-
 const Portfolio = () => {
   const soloProjects = [
     {
@@ -78,7 +77,7 @@ const Portfolio = () => {
       title: "MERN - GPS Expense Tracker",
       img: GET.src,
       description:
-        "A mobile app allows users to track how much they have spent by visiting places, depends on how long they have stayed in shops",
+        "A mobile app allows users to track how much they have spent by visiting places, depends on how long they have stayed in shops. ",
       frontend: "React Native, Redux",
       backend: "NodeJS, Express",
       database: "MongoDB",
@@ -87,13 +86,16 @@ const Portfolio = () => {
     },
     {
       id: 6,
-      title: "Laundry Label helper",
-      img: CU.src,
-      description:
-        "I am making this app to help me distinguish which laundry setting is the best for me to wash my clothings. Since I always use the wrong aundry setting and break my clothings which is super annoying",
-      technologies: "JavaScript | Scss | Python",
-      // link: "",
-      // github: "",
+      title: "E-commerce - Amazon clone",
+      img: EC.src,
+      description: "It is an Amazon clone which contains the admin and user",
+      account: "admin@example.com",
+      pw: "123456",
+      frontend: "Nextjs, Redux",
+      backend: "NodeJS",
+      database: "MongoDB",
+      link: "https://splendid-paprenjak-1ed3df.netlify.app/",
+      github: "https://github.com/aufung1999/GPS_expenxetracker",
     },
   ];
 
@@ -123,18 +125,22 @@ const Portfolio = () => {
             {soloProjects.map((pro, index) => (
               <article
                 className={
-                  pro.id == 6 ? styles["comingSoon"] : styles["portfolio__item"]
+                  pro.id == 7 ? styles["comingSoon"] : styles["portfolio__item"]
                 }
                 key={pro.id}
                 // style={{ animationDelay: `${index}s` }}
               >
                 <div className={styles["portfolio__item-image"]}>
                   <img
-                    className={
-                      pro.id == 6 || pro.id == 5 || pro.id == 3
+                    className={`list-group-item ${
+                      pro.id == 7 || pro.id == 5 || pro.id == 3
                         ? styles["adjustment"]
                         : ""
-                    }
+                    } ${
+                      pro.id == 6
+                        ? styles["scale_up"]
+                        : ""
+                    }`}
                     src={pro.img}
                     alt={pro.title}
                   />
@@ -150,7 +156,12 @@ const Portfolio = () => {
                   <h3>
                     <div className={styles["title"]}>{pro.title}</div>
                   </h3>
-                  <p className={styles["description"]}>{pro.description}</p>
+                  <p className={styles["description"]}>
+                    {pro.description}
+
+                    {pro.account && <div>account:{pro.account}</div>}
+                    {pro.pw && <div>password:{pro.pw}</div>}
+                  </p>
                   <p className={styles["techniques"]}>
                     {pro.frontend && (
                       <div className={styles["flex"]}>

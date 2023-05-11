@@ -56,11 +56,11 @@ const Experience = () => {
       <div className="container">
         <div className={styles["experience__container"]}>
           {/* animate.css */}
-          <ShowMany
+          {/* <ShowMany
             mode_IN={"animate__slideInLeft"}
             mode_OUT={"animate__slideOutLeft"}
             speed={"animate__"}
-          >
+          > */}
             <div className={styles["experience__frontend"]}>
               <h3>Front-end Development</h3>
               <div className={styles["experience__content"]}>
@@ -76,14 +76,14 @@ const Experience = () => {
                 ))}
               </div>
             </div>
-          </ShowMany>
+          {/* </ShowMany> */}
 
           {/* animate.css */}
-          <ShowMany
+          {/* <ShowMany
             mode_IN={"animate__slideInRight"}
             mode_OUT={"animate__slideOutRight"}
             speed={"animate__"}
-          >
+          > */}
             <div className={styles["experience__backend"]}>
               <h3>Back-end Development</h3>
               <div className={styles["experience__content"]}>
@@ -97,14 +97,14 @@ const Experience = () => {
                 ))}
               </div>
             </div>
-          </ShowMany>
+          {/* </ShowMany> */}
 
           {/* animate.css */}
-          <ShowMany
+          {/* <ShowMany
             mode_IN={"animate__slideInLeft"}
             mode_OUT={"animate__slideOutLeft"}
             speed={"animate__"}
-          >
+          > */}
             <div className={styles["experience__backend"]}>
               <h3>Database</h3>
               <div className={styles["experience__content"]}>
@@ -118,14 +118,14 @@ const Experience = () => {
                 ))}
               </div>
             </div>
-          </ShowMany>
+          {/* </ShowMany> */}
 
           {/* animate.css */}
-          <ShowMany
+          {/* <ShowMany
             mode_IN={"animate__slideInRight"}
             mode_OUT={"animate__slideOutRight"}
             speed={"animate__"}
-          >
+          > */}
             <div className={styles["experience__backend"]}>
               <h3>Other Services</h3>
               <div className={styles["experience__content"]}>
@@ -139,7 +139,7 @@ const Experience = () => {
                 ))}
               </div>
             </div>
-          </ShowMany>
+          {/* </ShowMany> */}
         </div>
       </div>
     </section>
