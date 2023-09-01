@@ -62,7 +62,7 @@ const Experience = () => {
             speed={"animate__"}
           > */}
             <div className={styles["experience__frontend"]}>
-              <h3>Front-end Development</h3>
+              <h4>Front-end Development</h4>
               <div className={styles["experience__content"]}>
                 {frontend?.map((each) => (
                   <article className={styles["experience__details"]} key={each}>
@@ -70,7 +70,7 @@ const Experience = () => {
                       <BsFillPatchCheckFill />
                     </div>
                     <div className={styles["experience__details-word"]}>
-                      <h4>{each}</h4>
+                      <div>{each}</div>
                     </div>
                   </article>
                 ))}
@@ -85,14 +85,14 @@ const Experience = () => {
             speed={"animate__"}
           > */}
             <div className={styles["experience__backend"]}>
-              <h3>Back-end Development</h3>
+              <h4>Back-end Development</h4>
               <div className={styles["experience__content"]}>
                 {backend?.map((each) => (
                   <article className={styles["experience__details"]} key={each}>
                     <BsFillPatchCheckFill
                       className={styles["experience__details-icon"]}
                     />
-                    <h4>{each}</h4>
+                    <div>{each}</div>
                   </article>
                 ))}
               </div>
@@ -106,14 +106,14 @@ const Experience = () => {
             speed={"animate__"}
           > */}
             <div className={styles["experience__backend"]}>
-              <h3>Database</h3>
+              <h4>Database</h4>
               <div className={styles["experience__content"]}>
                 {databases?.map((each) => (
                   <article className={styles["experience__details"]} key={each}>
                     <BsFillPatchCheckFill
                       className={styles["experience__details-icon"]}
                     />
-                    <h4>{each}</h4>
+                    <div>{each}</div>
                   </article>
                 ))}
               </div>
@@ -127,14 +127,14 @@ const Experience = () => {
             speed={"animate__"}
           > */}
             <div className={styles["experience__backend"]}>
-              <h3>Other Services</h3>
+              <h4>Other Services</h4>
               <div className={styles["experience__content"]}>
                 {services?.map((each) => (
                   <article className={styles["experience__details"]} key={each}>
                     <BsFillPatchCheckFill
                       className={styles["experience__details-icon"]}
                     />
-                    <h4>{each}</h4>
+                    <div>{each}</div>
                   </article>
                 ))}
               </div>

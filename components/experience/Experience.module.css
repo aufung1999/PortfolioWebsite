@@ -21,7 +21,7 @@
   cursor: default;
 }
 
-.experience__container > div h3 {
+.experience__container > div h4 {
   text-align: center;
   margin-bottom: 0.5rem;
   color: var(--color-primary);
@@ -55,7 +55,7 @@
   /* border: 1px solid;
   border-color: aliceblue; */
 }
-.experience__details-word { 
+.experience__details-word {
   display: flex;
   justify-content: center;
   width: 100%;

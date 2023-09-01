@@ -61,7 +61,7 @@ const Intro = () => {
 
                 <FaAward className={styles["about__icon"]} />
                 <h5>Experience</h5>
-                <h6>Web dev: 2 years</h6>
+                <h6>Web dev: 3+ years</h6>
                 <h6>Machine Learning: 1 year</h6>
               </article>
               <article className={styles["about__card"]}>
@@ -75,20 +75,22 @@ const Intro = () => {
 
             <div className={styles["about__content_paragraph"]}>
               <p>
-                I have started making web projects since year 2 when I was
-                studying at Hong Kong Polytechnic. I have also participated some
-                STEM internship related to web development. Participated in
-                small/medium-scaled projects.
+                I embarked on my journey in web development during my second
+                year of studies at Hong Kong Polytechnic. Since then, I have
+                actively engaged in this field, including participating in STEM
+                internships focused on web development and contributing to
+                various small and medium-sized projects.
               </p>
               <p>
-                In my final year of degree, I have also learnt Machine Learning
-                for my honours project, then I combined the Machine Learning and
-                Web development together.
+                In my final year of my degree program, I delved into machine
+                learning as part of my honors project. I then seamlessly
+                integrated my knowledge of machine learning with web
+                development.
               </p>
             </div>
             <div className={styles["about__contact_btn"]}>
               <a href="#contact" className="btn btn-primary">
-                Let&#39;s Talk about why we Celebrate our birthdays
+                Let&#39;s Talk
               </a>
             </div>
           </div>

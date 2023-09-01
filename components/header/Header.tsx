@@ -17,9 +17,9 @@ const Header = () => {
         <div className={styles["header__container"]}>
           {/* animate.css */}
 
-          <ShowMany
-            mode_IN={"animate__zoomInDown"}
-            mode_OUT={"animate__zoomOutDown"}
+          <ShowOnce
+            mode={"animate__zoomInDown"}
+            // mode_OUT={"animate__zoomOutDown"}
             speed={"animate"}
           >
             <h5>Hello I am</h5>
@@ -34,7 +34,7 @@ const Header = () => {
             >
               <CTA />
             </ShowMany>
-          </ShowMany>
+          </ShowOnce>
 
           <a href="#contact" className={styles.scroll__down}>
             Scroll Down

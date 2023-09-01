@@ -5,13 +5,13 @@ import styles from "./Header.module.css";
 const CTA = () => {
   return (
     <div className={styles.cta}>
-      <a
+      {/* <a
         href="assets/Resume_2.pdf"
         download
         className="btn"
       >
         Download CV
-      </a>
+      </a> */}
       <a href="#contact" className="btn btn-primary">
         Let&#39;s talk
       </a>

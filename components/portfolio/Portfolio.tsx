@@ -120,95 +120,79 @@ const Portfolio = () => {
         </ShowMany>
       </h2>
       <div className="container">
-        <ShowOnce mode={"animate__zoomInDown"} speed={"animate__fast"}>
-          <div className={styles["portfolio__container"]}>
-            {soloProjects.map((pro, index) => (
-              <article
-                className={
-                  pro.id == 7 ? styles["comingSoon"] : styles["portfolio__item"]
-                }
-                key={pro.id}
-                // style={{ animationDelay: `${index}s` }}
-              >
-                <div className={styles["portfolio__item-image"]}>
-                  <img
-                    className={`list-group-item ${
-                      pro.id == 7 || pro.id == 5 || pro.id == 3
-                        ? styles["adjustment"]
-                        : ""
-                    } ${
-                      pro.id == 6
-                        ? styles["scale_up"]
-                        : ""
-                    }`}
-                    src={pro.img}
-                    alt={pro.title}
-                  />
-                  {/* <Image
-                    className="object-cover"
-                    src={pro.img}
-                    alt={pro.title}
-                    width={200}
-                    height={200}
-                  /> */}
-                </div>
-                <div className={styles["portfolio__item-content"]}>
-                  <h3>
-                    <div className={styles["title"]}>{pro.title}</div>
-                  </h3>
-                  <p className={styles["description"]}>
-                    {pro.description}
-
-                    {pro.account && <div>account:{pro.account}</div>}
-                    {pro.pw && <div>password:{pro.pw}</div>}
-                  </p>
-                  <p className={styles["techniques"]}>
-                    {pro.frontend && (
-                      <div className={styles["flex"]}>
-                        <div className={styles["prefix"]}>Frontned</div>
-                        <div>{pro.frontend}</div>
-                      </div>
-                    )}
-                    {pro.backend && (
-                      <div className={styles["flex"]}>
-                        <div className={styles["prefix"]}>Backend</div>
-                        <div>{pro.backend}</div>
-                      </div>
-                    )}
-                    {pro.database && (
-                      <div className={styles["flex"]}>
-                        <div className={styles["prefix"]}>Database</div>
-                        <div>{pro.database}</div>
-                      </div>
-                    )}
-                  </p>
-                </div>
-                <div className={styles["portfolio__item-cta"]}>
-                  {pro.github && (
-                    <a
-                      href={pro.github}
-                      target="_blank"
-                      className="btn"
-                      rel="noreferrer"
-                    >
-                      GitHub
-                    </a>
+        <div className={styles["portfolio__container"]}>
+          {soloProjects.map((pro, index) => (
+            <div
+              className={styles["portfolio__item"]}
+              key={pro.id}
+              // style={{ animationDelay: `${index}s` }}
+            >
+              <div className={styles["portfolio__item-image"]}>
+                <img
+                  className={` ${
+                    pro.id == 7 || pro.id == 5 || pro.id == 3
+                      ? styles["adjustment"]
+                      : ""
+                  } ${pro.id == 6 ? styles["scale_up"] : ""}`}
+                  src={pro.img}
+                  alt={pro.title}
+                />
+              </div>
+              <div className={styles["portfolio__item-content"]}>
+                <h3>
+                  <div className={styles["title"]}>{pro.title}</div>
+                </h3>
+                <p className={styles["description"]}>
+                  {pro.description}
+                  {pro.account && <div>account:{pro.account}</div>}
+                  {pro.pw && <div>password:{pro.pw}</div>}
+                </p>
+                <p className={styles["techniques"]}>
+                  {pro.frontend && (
+                    <div className={styles["flex"]}>
+                      <div className={styles["prefix"]}>Frontned</div>
+                      <div>{pro.frontend}</div>
+                    </div>
                   )}
-                  {pro.link && (
-                    <a
-                      href={pro.link}
-                      target="_blank"
-                      className="btn btn-primary"
-                      rel="noreferrer"
-                    >
-                      Visit Website
-                    </a>
+                  {pro.backend && (
+                    <div className={styles["flex"]}>
+                      <div className={styles["prefix"]}>Backend</div>
+                      <div>{pro.backend}</div>
+                    </div>
                   )}
-                </div>
-              </article>
-            ))}
-          </div>
-        </ShowOnce>
+                  {pro.database && (
+                    <div className={styles["flex"]}>
+                      <div className={styles["prefix"]}>Database</div>
+                      <div>{pro.database}</div>
+                    </div>
+                  )}
+                </p>
+              </div>
+              <div className={styles["portfolio__item-cta"]}>
+                {pro.github && (
+                  <a
+                    href={pro.github}
+                    target="_blank"
+                    className="btn"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                )}
+                {pro.link && (
+                  <a
+                    href={pro.link}
+                    target="_blank"
+                    className="btn btn-primary"
+                    rel="noreferrer"
+                  >
+                    Visit Website
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

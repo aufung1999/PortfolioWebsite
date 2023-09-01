@@ -84,9 +84,8 @@ const Contact = () => {
             </ShowMany>
           </div>
           {/* animate.css */}
-          <ShowMany
-            mode_IN={"animate__slideInRight"}
-            mode_OUT={"animate__slideOutRight"}
+          <ShowOnce
+            mode={"animate__slideInRight"}
             speed={"animate__fast"}
           >
             <form ref={formRef} onSubmit={handleSubmit}>
@@ -113,7 +112,7 @@ const Contact = () => {
               </button>
               {message && <span>Thanks, I&#39;ll reply ASAP </span>}
             </form>
-          </ShowMany>
+          </ShowOnce>
         </div>
       </div>
     </section>
