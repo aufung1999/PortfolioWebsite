@@ -120,25 +120,29 @@ const Portfolio = () => {
         </ShowMany>
       </h2>
       <div className="container">
-        <div className={styles["portfolio__container"]}>
+        <div className={` ${styles["portfolio__container"]} w-full flex`}>
           {soloProjects.map((pro, index) => (
             <div
-              className={styles["portfolio__item"]}
+              className={`${styles["portfolio__item"]} group `}
               key={pro.id}
               // style={{ animationDelay: `${index}s` }}
             >
-              <div className={styles["portfolio__item-image"]}>
+              {/* <div
+                className={`${styles["portfolio__item-image"]} hidden group-hover:block`}
+              >
                 <img
-                  className={` ${
-                    pro.id == 7 || pro.id == 5 || pro.id == 3
-                      ? styles["adjustment"]
-                      : ""
-                  } ${pro.id == 6 ? styles["scale_up"] : ""}`}
+                  // className={` ${
+                  //   pro.id == 7 || pro.id == 5 || pro.id == 3
+                  //     ? styles["adjustment"]
+                  //     : ""
+                  // } ${pro.id == 6 ? styles["scale_up"] : ""} `}
                   src={pro.img}
                   alt={pro.title}
                 />
-              </div>
-              <div className={styles["portfolio__item-content"]}>
+              </div> */}
+              <div
+                className={` ${styles["portfolio__item-content"]} ${styles["hover-trigger"]}`}
+              >
                 <h3>
                   <div className={styles["title"]}>{pro.title}</div>
                 </h3>
@@ -147,25 +151,33 @@ const Portfolio = () => {
                   {pro.account && <div>account:{pro.account}</div>}
                   {pro.pw && <div>password:{pro.pw}</div>}
                 </p>
-                <p className={styles["techniques"]}>
-                  {pro.frontend && (
-                    <div className={styles["flex"]}>
-                      <div className={styles["prefix"]}>Frontned</div>
-                      <div>{pro.frontend}</div>
-                    </div>
-                  )}
-                  {pro.backend && (
-                    <div className={styles["flex"]}>
-                      <div className={styles["prefix"]}>Backend</div>
-                      <div>{pro.backend}</div>
-                    </div>
-                  )}
-                  {pro.database && (
-                    <div className={styles["flex"]}>
-                      <div className={styles["prefix"]}>Database</div>
-                      <div>{pro.database}</div>
-                    </div>
-                  )}
+                <p
+                  className={` hidden group-hover:block ${styles["techniques"]}`}
+                >
+                  <div>
+                    {pro.frontend && (
+                      <div className={styles["flex"]}>
+                        <div className={styles["prefix"]}>Frontned</div>
+                        <div>{pro.frontend}</div>
+                      </div>
+                    )}
+                  </div>
+                  <div>
+                    {pro.backend && (
+                      <div className={styles["flex"]}>
+                        <div className={styles["prefix"]}>Backend</div>
+                        <div>{pro.backend}</div>
+                      </div>
+                    )}
+                  </div>
+                  <div>
+                    {pro.database && (
+                      <div className={styles["flex"]}>
+                        <div className={styles["prefix"]}>Database</div>
+                        <div>{pro.database}</div>
+                      </div>
+                    )}
+                  </div>
                 </p>
               </div>
               <div className={styles["portfolio__item-cta"]}>
