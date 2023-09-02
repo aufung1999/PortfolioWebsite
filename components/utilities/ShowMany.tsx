@@ -33,9 +33,7 @@ const ShowMany = ({
         <div
           className={`${
             isVisible
-              ? `animate__animated ${mode_IN} ${speed}  animate__delay-${
-                  delay && delay * 250
-                }ms`
+              ? `animate__animated ${mode_IN} ${speed}`
               : `animate__animated ${mode_OUT} ${speed}`
           }`}
         >

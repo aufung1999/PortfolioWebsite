@@ -9,6 +9,7 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 import ShowMany from "../utilities/ShowMany";
 import ShowOnce from "../utilities/ShowOnce";
+import EachThing from "./Each";
 
 const Experience = () => {
   const [count, setCount] = useState(0);
@@ -61,21 +62,23 @@ const Experience = () => {
             mode_OUT={"animate__slideOutLeft"}
             speed={"animate__"}
           > */}
-            <div className={styles["experience__frontend"]}>
-              <h4>Front-end Development</h4>
-              <div className={styles["experience__content"]}>
-                {frontend?.map((each) => (
-                  <article className={styles["experience__details"]} key={each}>
-                    <div className={styles["experience__details-icon"]}>
-                      <BsFillPatchCheckFill />
-                    </div>
-                    <div className={styles["experience__details-word"]}>
-                      <div>{each}</div>
-                    </div>
-                  </article>
-                ))}
-              </div>
+          <div className={styles["experience__frontend"]}>
+            <h4>Front-end Development</h4>
+            <div className={styles["experience__content"]}>
+              {frontend?.map((each, index) => (
+                <TrackVisibility key={each}>
+                  {({ isVisible }) => (
+                    <EachThing
+                      key={each}
+                      each={each}
+                      index={index}
+                      isVisible={isVisible}
+                    />
+                  )}
+                </TrackVisibility>
+              ))}
             </div>
+          </div>
           {/* </ShowMany> */}
 
           {/* animate.css */}
@@ -84,19 +87,23 @@ const Experience = () => {
             mode_OUT={"animate__slideOutRight"}
             speed={"animate__"}
           > */}
-            <div className={styles["experience__backend"]}>
-              <h4>Back-end Development</h4>
-              <div className={styles["experience__content"]}>
-                {backend?.map((each) => (
-                  <article className={styles["experience__details"]} key={each}>
-                    <BsFillPatchCheckFill
-                      className={styles["experience__details-icon"]}
+          <div className={styles["experience__backend"]}>
+            <h4>Back-end Development</h4>
+            <div className={styles["experience__content"]}>
+              {backend?.map((each, index) => (
+                <TrackVisibility key={each}>
+                  {({ isVisible }) => (
+                    <EachThing
+                      key={each}
+                      each={each}
+                      index={index}
+                      isVisible={isVisible}
                     />
-                    <div>{each}</div>
-                  </article>
-                ))}
-              </div>
+                  )}
+                </TrackVisibility>
+              ))}
             </div>
+          </div>
           {/* </ShowMany> */}
 
           {/* animate.css */}
@@ -105,19 +112,23 @@ const Experience = () => {
             mode_OUT={"animate__slideOutLeft"}
             speed={"animate__"}
           > */}
-            <div className={styles["experience__backend"]}>
-              <h4>Database</h4>
-              <div className={styles["experience__content"]}>
-                {databases?.map((each) => (
-                  <article className={styles["experience__details"]} key={each}>
-                    <BsFillPatchCheckFill
-                      className={styles["experience__details-icon"]}
+          <div className={styles["experience__backend"]}>
+            <h4>Database</h4>
+            <div className={styles["experience__content"]}>
+              {databases?.map((each, index) => (
+                <TrackVisibility key={each}>
+                  {({ isVisible }) => (
+                    <EachThing
+                      key={each}
+                      each={each}
+                      index={index}
+                      isVisible={isVisible}
                     />
-                    <div>{each}</div>
-                  </article>
-                ))}
-              </div>
+                  )}
+                </TrackVisibility>
+              ))}
             </div>
+          </div>
           {/* </ShowMany> */}
 
           {/* animate.css */}
@@ -126,19 +137,23 @@ const Experience = () => {
             mode_OUT={"animate__slideOutRight"}
             speed={"animate__"}
           > */}
-            <div className={styles["experience__backend"]}>
-              <h4>Other Services</h4>
-              <div className={styles["experience__content"]}>
-                {services?.map((each) => (
-                  <article className={styles["experience__details"]} key={each}>
-                    <BsFillPatchCheckFill
-                      className={styles["experience__details-icon"]}
+          <div className={styles["experience__backend"]}>
+            <h4>Other Services</h4>
+            <div className={styles["experience__content"]}>
+              {services?.map((each, index) => (
+                <TrackVisibility key={each}>
+                  {({ isVisible }) => (
+                    <EachThing
+                      key={each}
+                      each={each}
+                      index={index}
+                      isVisible={isVisible}
                     />
-                    <div>{each}</div>
-                  </article>
-                ))}
-              </div>
+                  )}
+                </TrackVisibility>
+              ))}
             </div>
+          </div>
           {/* </ShowMany> */}
         </div>
       </div>
