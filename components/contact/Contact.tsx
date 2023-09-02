@@ -74,6 +74,7 @@ const Contact = () => {
               mode_IN={"animate__slideInLeft"}
               mode_OUT={"animate__slideOutLeft"}
               speed={"animate__fast"}
+              animateOrder={null}
             >
               <article className={styles["contact__option"]}>
                 <MdOutlineEmail className={styles["contact__option-icon"]} />
@@ -84,10 +85,7 @@ const Contact = () => {
             </ShowMany>
           </div>
           {/* animate.css */}
-          <ShowOnce
-            mode={"animate__slideInRight"}
-            speed={"animate__fast"}
-          >
+          <ShowOnce mode={"animate__slideInRight"} speed={"animate__fast"}>
             <form ref={formRef} onSubmit={handleSubmit}>
               <input
                 type="text"

@@ -5,7 +5,7 @@
 }
 
 .portfolio__item {
-  border: 10px solid;
+  border: 5px solid;
   border-color: aliceblue;
 
   background: var(--color-bg-variant);

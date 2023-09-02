@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import IMG1 from "../../public/assets/bookstore.png";
 import IMG2 from "../../public/assets/todo.png";
 import IMG3 from "../../public/assets/shelter.png";
@@ -23,6 +23,23 @@ import Image from "next/image";
 //   src: string | StaticImageData;
 //   className?: string;
 // }
+
+interface Project {
+  id: number;
+  title: string;
+  img: string | undefined;
+  description: string;
+  frontend: string;
+  backend: string;
+  link: string;
+  github: string;
+}
+
+type State = {
+  // Other state properties...
+  [key: string]: boolean;
+};
+
 const Portfolio = () => {
   const soloProjects = [
     {
@@ -99,6 +116,39 @@ const Portfolio = () => {
     },
   ];
 
+  //array.map(each=>const [animateComponent${each.id}, setAnimateComponent${each.id}] = useState(false))
+  const initialState = Object.fromEntries(
+    soloProjects.map((item: Project | any) => [
+      `animateComponent${JSON.stringify(item.id)}`,
+      false,
+    ])
+  );
+
+  const [animateStates, setAnimateStates] = useState<State>(initialState);
+
+  useEffect(() => {
+    let delay = 0;
+
+    soloProjects.map((each: Project | any, i: number) => {
+      setTimeout(
+        () =>
+          setAnimateStates((prevState: State) => ({
+            ...prevState,
+            [`animateComponent${each.id}`]: true,
+          })),
+        i * 1000
+      );
+      console.log(animateStates);
+    });
+  }, []);
+
+  // const toggleAnimation = (itemId: string, shouldSwitch: boolean) => {
+  //   setAnimateStates((prevState: State) => ({
+  //     ...prevState,
+  //     [`animateComponent${itemId}`]: shouldSwitch,
+  //   }));
+  // };
+
   return (
     <section id="portfolio" className="">
       <h5>
@@ -123,14 +173,15 @@ const Portfolio = () => {
         <div className={` ${styles["portfolio__container"]} w-full flex`}>
           {soloProjects.map((pro, index) => (
             <div
-              className={`${styles["portfolio__item"]} group `}
+              className={`${styles["portfolio__item"]} group`}
               key={pro.id}
               // style={{ animationDelay: `${index}s` }}
             >
-              {/* <div
-                className={`${styles["portfolio__item-image"]} hidden group-hover:block`}
+              <div
+                className={` w-full h-32 ${styles["portfolio__item-image"]} `}
               >
                 <img
+                  className=" w-full h-full object-fit"
                   // className={` ${
                   //   pro.id == 7 || pro.id == 5 || pro.id == 3
                   //     ? styles["adjustment"]
@@ -139,20 +190,28 @@ const Portfolio = () => {
                   src={pro.img}
                   alt={pro.title}
                 />
-              </div> */}
+              </div>
               <div
                 className={` ${styles["portfolio__item-content"]} ${styles["hover-trigger"]}`}
               >
                 <h3>
                   <div className={styles["title"]}>{pro.title}</div>
                 </h3>
-                <p className={styles["description"]}>
+                <div className={` group-hover:block ${styles["description"]}`}>
                   {pro.description}
-                  {pro.account && <div>account:{pro.account}</div>}
-                  {pro.pw && <div>password:{pro.pw}</div>}
-                </p>
-                <p
-                  className={` hidden group-hover:block ${styles["techniques"]}`}
+                  {pro.account && (
+                    <div className=" text-sm font-semibold underline">
+                      account: {pro.account}
+                    </div>
+                  )}
+                  {pro.pw && (
+                    <div className="text-sm font-semibold underline">
+                      password: {pro.pw}
+                    </div>
+                  )}
+                </div>
+                <div
+                  className={` group-hover:opacity-100  transition ${styles["techniques"]}  opacity-0 transition-opacity duration-500 ease-in-out `}
                 >
                   <div>
                     {pro.frontend && (
@@ -178,7 +237,7 @@ const Portfolio = () => {
                       </div>
                     )}
                   </div>
-                </p>
+                </div>
               </div>
               <div className={styles["portfolio__item-cta"]}>
                 {pro.github && (
