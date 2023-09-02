@@ -16,25 +16,16 @@ const Intro = () => {
     <section id="about">
       <h5>
         {/* animate.css */}
-
-        <ShowMany
-          mode_IN={"animate__zoomInDown"}
-          mode_OUT={"animate__zoomOutDown"}
-          speed={"animate__slow"}
-        >
+        <ShowOnce mode={"animate__zoomInDown"} speed={"animate__fast"}>
           Get to know
-        </ShowMany>
+        </ShowOnce>
       </h5>
       <h2>
         {/* animate.css */}
 
-        <ShowMany
-          mode_IN={"animate__zoomInDown"}
-          mode_OUT={"animate__zoomOutDown"}
-          speed={"animate__slow"}
-        >
+        <ShowOnce mode={"animate__zoomInDown"} speed={"animate__fast"}>
           About Me
-        </ShowMany>
+        </ShowOnce>
       </h2>
       <div className="container">
         <div className={styles["about__container"]}>

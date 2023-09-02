@@ -37,22 +37,20 @@ const Experience = () => {
   return (
     <section id="experience">
       <h5>
-        <ShowMany
-          mode_IN={"animate__zoomInDown"}
-          mode_OUT={"animate__zoomOutDown"}
+        <ShowOnce
+          mode={"animate__zoomInDown"}
           speed={"animate__fast"}
         >
           Skills I have
-        </ShowMany>
+        </ShowOnce>
       </h5>
       <h2>
-        <ShowMany
-          mode_IN={"animate__zoomInDown"}
-          mode_OUT={"animate__zoomOutDown"}
+        <ShowOnce
+          mode={"animate__zoomInDown"}
           speed={"animate__fast"}
         >
           Skills
-        </ShowMany>
+        </ShowOnce>
       </h2>
       <div className="container">
         <div className={styles["experience__container"]}>

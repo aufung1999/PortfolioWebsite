@@ -152,22 +152,14 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="">
       <h5>
-        <ShowMany
-          mode_IN={"animate__zoomInDown"}
-          mode_OUT={"animate__zoomOutDown"}
-          speed={"animate__fast"}
-        >
+        <ShowOnce mode={"animate__zoomInDown"} speed={"animate__fast"}>
           My Recent Works
-        </ShowMany>
+        </ShowOnce>
       </h5>
       <h2>
-        <ShowMany
-          mode_IN={"animate__zoomInDown"}
-          mode_OUT={"animate__zoomOutDown"}
-          speed={"animate__fast"}
-        >
+        <ShowOnce mode={"animate__zoomInDown"} speed={"animate__fast"}>
           Portfolio
-        </ShowMany>
+        </ShowOnce>
       </h2>
       <div className="container">
         <div className={` ${styles["portfolio__container"]} w-full flex`}>
